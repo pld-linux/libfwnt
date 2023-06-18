@@ -1,28 +1,28 @@
 # see m4/${libname}.m4 />= for required version of particular library
-%define		libcdata_ver	20181216
+%define		libcdata_ver	20220115
 %define		libcerror_ver	20120425
 %define		libcnotify_ver	20120425
 %define		libcthreads_ver	20160404
 Summary:	Library to support Windows NT specific formats
 Summary(pl.UTF-8):	Biblioteka wspierająca formaty specyficzne dla Windows NT
 Name:		libfwnt
-Version:	20181227
+Version:	20220922
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libfwnt/releases
 Source0:	https://github.com/libyal/libfwnt/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	4af5a64b1603ef19c22c2a90162cf114
+# Source0-md5:	2ded7b9676b0d5c80b0e9ebb66ac9561
 URL:		https://github.com/libyal/libfwnt/
-BuildRequires:	autoconf >= 2.59
+BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1.6
-BuildRequires:	gettext-tools >= 0.18.1
+BuildRequires:	gettext-tools >= 0.21
 BuildRequires:	libcdata-devel >= %{libcdata_ver}
 BuildRequires:	libcerror-devel >= %{libcerror_ver}
 BuildRequires:	libcnotify-devel >= %{libcnotify_ver}
 BuildRequires:	libcstring-devel >= 20120425
 BuildRequires:	libcthreads-devel >= %{libcthreads_ver}
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 %{?with_python2:BuildRequires:	python-devel >= 2}
 %{?with_python3:BuildRequires:	python3-devel >= 1:3.2}
