@@ -6,13 +6,13 @@
 Summary:	Library to support Windows NT specific formats
 Summary(pl.UTF-8):	Biblioteka wspierająca formaty specyficzne dla Windows NT
 Name:		libfwnt
-Version:	20231124
+Version:	20240126
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libfwnt/releases
 Source0:	https://github.com/libyal/libfwnt/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	0fd7ee00f5746f692c71f51777df014f
+# Source0-md5:	9f593c47477f9860fa66b31105d82240
 URL:		https://github.com/libyal/libfwnt/
 BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1.6
