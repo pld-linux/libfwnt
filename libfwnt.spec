@@ -6,13 +6,13 @@
 Summary:	Library to support Windows NT specific formats
 Summary(pl.UTF-8):	Biblioteka wspierająca formaty specyficzne dla Windows NT
 Name:		libfwnt
-Version:	20240415
+Version:	20260522
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/libyal/libfwnt/releases
 Source0:	https://github.com/libyal/libfwnt/releases/download/%{version}/%{name}-alpha-%{version}.tar.gz
-# Source0-md5:	778727efafbbcc798c9d6d9d27d4630e
+# Source0-md5:	052a622db9e568ce0701ab5d14a8fb84
 URL:		https://github.com/libyal/libfwnt/
 BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1.6
@@ -20,7 +20,6 @@ BuildRequires:	gettext-tools >= 0.21
 BuildRequires:	libcdata-devel >= %{libcdata_ver}
 BuildRequires:	libcerror-devel >= %{libcerror_ver}
 BuildRequires:	libcnotify-devel >= %{libcnotify_ver}
-BuildRequires:	libcstring-devel >= 20120425
 BuildRequires:	libcthreads-devel >= %{libcthreads_ver}
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
@@ -30,7 +29,6 @@ BuildRequires:	rpm-pythonprov
 Requires:	libcdata >= %{libcdata_ver}
 Requires:	libcerror >= %{libcerror_ver}
 Requires:	libcnotify >= %{libcnotify_ver}
-Requires:	libcstring >= 20120425
 Requires:	libcthreads >= %{libcthreads_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,7 +46,6 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	libcdata-devel >= %{libcdata_ver}
 Requires:	libcerror-devel >= %{libcerror_ver}
 Requires:	libcnotify-devel >= %{libcnotify_ver}
-Requires:	libcstring-devel >= 20120425
 Requires:	libcthreads-devel >= %{libcthreads_ver}
 
 %description devel
@@ -133,12 +130,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_libdir}/libfwnt.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libfwnt.so.1
+%{_libdir}/libfwnt.so.*.*.*
+%ghost %{_libdir}/libfwnt.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libfwnt.so
+%{_libdir}/libfwnt.so
 %{_includedir}/libfwnt
 %{_includedir}/libfwnt.h
 %{_pkgconfigdir}/libfwnt.pc
@@ -151,11 +148,11 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files -n python-pyfwnt
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_sitedir}/pyfwnt.so
+%{py_sitedir}/pyfwnt.so
 %endif
 
 %if %{with python3}
 %files -n python3-pyfwnt
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py3_sitedir}/pyfwnt.so
+%{py3_sitedir}/pyfwnt.so
 %endif
